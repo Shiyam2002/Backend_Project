@@ -1,12 +1,35 @@
-I am currently developing a comprehensive backend system for healthcare appointment scheduling using Spring Boot. The project is designed to streamline the management of patient appointments, from registration to scheduling, aiming to enhance the efficiency and service delivery in healthcare facilities.
+# Healthcare Appointment Scheduling System
 
-The system enables secure patient registration, capturing personal, contact, and insurance information with robust data validation. Patients can update their details as needed, ensuring that their information remains accurate. The appointment scheduling feature allows patients to book appointments based on doctor availability, time slots, and specializations, while managing conflicts to present only available options. Users can also view appointments by date or doctor, making it easy for both patients and healthcare providers to manage their schedules.
+## Overview
 
-To support the functionality, I have integrated key technologies:
+This project is a comprehensive backend system for healthcare appointment scheduling developed using **Spring Boot**. The primary goal is to streamline the management of patient appointments, improving efficiency and service delivery in healthcare facilities.
 
-Postman for API testing and validation,
-Spring JPA for smooth database interactions with MySQL,
-Log4j for logging and auditing activities, ensuring traceability and system performance monitoring,
-A custom ResponseHandler for structured and consistent API responses,
-Global Exception Handling to gracefully manage errors and provide clear feedback to users.
-As the project is still in development, I am continually adding new features and refining the system, with plans for future enhancements such as notification services, reminders, and payment integration. This backend project lays a solid foundation for improving appointment management and the overall patient experience in healthcare systems.
+## Features
+
+- **Patient Registration**: Allows secure registration of patient details, including personal, contact, and insurance information, with robust data validation.
+- **Edit Patient Details**: Enables patients to update their information, ensuring accuracy and currency of records.
+- **Appointment Scheduling**: Facilitates booking appointments based on doctor availability, time slots, and specializations, managing conflicts to present only available options.
+- **View Appointments by Date/Doctor**: Provides easy access to appointments, allowing users to filter by date or specific doctor.
+
+## Technologies Used
+
+- **Spring Boot**: For building the RESTful API and managing application configuration.
+- **Spring JPA**: For seamless interaction with the MySQL database.
+- **Postman**: For API testing and validation.
+- **Log4j**: For logging and auditing user actions, ensuring traceability and system performance monitoring.
+- **ResponseHandler**: Custom implementation to provide structured and consistent API responses.
+- **Global Exception Handling**: Manages errors gracefully, offering clear feedback to users.
+
+## Development Status
+
+This project is currently under development, with ongoing enhancements and feature additions planned, including notification services, reminders, and payment integration.
+
+## Getting Started
+
+To get started with this project, clone the repository and follow the setup instructions below.
+
+### Prerequisites
+
+- JDK 17
+- MySQL
+- Maven
