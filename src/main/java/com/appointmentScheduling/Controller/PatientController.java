@@ -129,7 +129,7 @@ public class PatientController {
     }
 
     @GetMapping("/Count")
-    public ResponseEntity<Object> countTotalPatients() throws PatientException {
+    public ResponseEntity<Object> countTotalPatients() throws PatientException   {
         log.debug("Fetching total number of patients");
         return ResponseHandler.getResponse("Total number of patients fetched", HttpStatus.OK, service.countTotalPatients());
     }
