@@ -3,12 +3,13 @@ package com.appointmentScheduling.Interceptors;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.PrintWriter;
 
 @Component
-public class HeaderValidation {
+public class HeaderValidation implements HandlerInterceptor {
 
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String customHeader = request.getHeader("X-Custom-Header");
@@ -27,7 +28,7 @@ public class HeaderValidation {
         System.out.println("Post-handle: Request processed, preparing to render view.");
     }
 
-    // @Override
+     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         System.out.println("After-completion: Request and response completed.");
     }
