@@ -19,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/patient")
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 public class PatientController {
 
 
@@ -59,7 +60,7 @@ public class PatientController {
         if (log.isInfoEnabled()) {
             log.info("Patient found: " + patientDTO);
         }
-        return ResponseHandler.getResponse("Patient fetched successfully", HttpStatus.ACCEPTED, patientDTO);
+        return ResponseHandler.getResponse("Patient fetched successfully", HttpStatus.OK, patientDTO);
     }
 
     @GetMapping("/patientList")

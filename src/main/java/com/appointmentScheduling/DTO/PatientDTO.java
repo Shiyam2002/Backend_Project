@@ -16,10 +16,9 @@ import java.time.LocalDate;
 @AllArgsConstructor(staticName = "build")
 public class PatientDTO {
 
+    private Integer patientID;
 
     private String patientName;
-
-    private String password;
 
     private String patientEmail;
 
@@ -38,9 +37,9 @@ public class PatientDTO {
     public static PatientDTO toPatientDTO(Patient patient, AddressDTO addressDTO, InsuranceDTO insuranceDTO) {
 
         return PatientDTO.builder()
+                .patientID(patient.getPatientId())
                 .patientName(patient.getPatientName())
                 .patientEmail(patient.getPatientEmail())
-                .password(patient.getPassword())
                 .patientDob(patient.getPatientDob())
                 .annualIncome(patient.getAnnualIncome())
                 .patientPhone(patient.getPatientPhone())
@@ -52,9 +51,9 @@ public class PatientDTO {
 
     public static Patient toPatientEntity(PatientDTO patientDTO, Address address, Insurance insurance) {
         return Patient.builder()
+                .patientId(patientDTO.patientID)
                 .patientName(patientDTO.patientName)
                 .patientEmail(patientDTO.patientEmail)
-                .password(patientDTO.password)
                 .patientDob(patientDTO.getPatientDob())
                 .annualIncome(patientDTO.getAnnualIncome())
                 .patientPhone(patientDTO.getPatientPhone())

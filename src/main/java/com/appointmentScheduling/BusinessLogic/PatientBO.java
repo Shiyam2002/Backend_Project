@@ -160,9 +160,9 @@ public class PatientBO {
         if (patient.getPatientName() == null) {
             throw new PatientException("Patient name is mandatory");
         }
-        if (patient.getPassword() == null) {
-            throw new PatientException("Password is mandatory");
-        }
+//        if (patient.getPassword() == null) {
+//            throw new PatientException("Password is mandatory");
+//        }
         if (patient.getPatientEmail() == null) {
             throw new PatientException("Patient email is mandatory");
         }

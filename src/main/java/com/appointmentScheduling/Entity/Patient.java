@@ -32,8 +32,8 @@ public class Patient {
     @Column(name = "Patient_Name", length = 50, nullable = false)
     private String patientName;
 
-    @Column(name = "Password", length = 20, nullable = false)
-    private String password;
+//    @Column(name = "Password", length = 20, nullable = false)
+//    private String password;
 
     @Column(name = "Patient_Email", length = 40, nullable = false)
     private String patientEmail;

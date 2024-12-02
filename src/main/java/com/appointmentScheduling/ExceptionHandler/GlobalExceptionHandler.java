@@ -1,9 +1,7 @@
 package com.appointmentScheduling.ExceptionHandler;
 
 
-import com.appointmentScheduling.Exception.PatientAlreadyExistsException;
-import com.appointmentScheduling.Exception.PatientException;
-import com.appointmentScheduling.Exception.PatientNotFoundException;
+import com.appointmentScheduling.Exception.*;
 import com.appointmentScheduling.Response.ResponseHandler;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
@@ -38,5 +36,29 @@ public class GlobalExceptionHandler {
             log.debug("Patient already exists" + patientAlreadyExists.getMessage());
         }
         return ResponseHandler.getResponse("PatientAlreadyExistsException :" + patientAlreadyExists.getMessage(), HttpStatus.BAD_REQUEST, null);
+    }
+
+    @ExceptionHandler(AppointmentNotFoundException.class)
+    public ResponseEntity<Object> handleAppointmentNotFoundException(AppointmentNotFoundException appointmentNotFoundException) {
+        if (log.isDebugEnabled()) {
+            log.debug("Patient already exists" + appointmentNotFoundException.getMessage());
+        }
+        return ResponseHandler.getResponse("PatientAlreadyExistsException :" + appointmentNotFoundException.getMessage(), HttpStatus.BAD_REQUEST, null);
+    }
+
+    @ExceptionHandler(AppointmentException.class)
+    public ResponseEntity<Object> handleAppointmentException(AppointmentException appointmentException) {
+        if (log.isDebugEnabled()) {
+            log.debug("Patient already exists" + appointmentException.getMessage());
+        }
+        return ResponseHandler.getResponse("PatientAlreadyExistsException :" + appointmentException.getMessage(), HttpStatus.BAD_REQUEST, null);
+    }
+
+    @ExceptionHandler(AppointmentAlreadyExistException.class)
+    public ResponseEntity<Object> handleAppointmentAlreadyExistException(AppointmentAlreadyExistException AppointmentAlreadyExistException) {
+        if (log.isDebugEnabled()) {
+            log.debug("Patient already exists" + AppointmentAlreadyExistException.getMessage());
+        }
+        return ResponseHandler.getResponse("PatientAlreadyExistsException :" + AppointmentAlreadyExistException.getMessage(), HttpStatus.BAD_REQUEST, null);
     }
 }

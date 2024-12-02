@@ -20,7 +20,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(headerValidationInterceptor).addPathPatterns("/**").order(2);
         registry.addInterceptor(loggingInterceptor).order(1);
-        registry.addInterceptor(roleInterceptor).addPathPatterns("/api/patient/signup", "/api/patient/deletePatient/**", "/api/patient/updatePatient/**",
+        registry.addInterceptor(roleInterceptor).addPathPatterns("/api/patient/signup","/api/patient/patientList", "/api/patient/deletePatient/**", "/api/patient/updatePatient/**",
                 "/api/address/create", "/api/address/delete").order(3);
     }
 
